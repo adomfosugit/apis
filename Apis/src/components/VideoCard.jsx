@@ -1,35 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import ReactPlayer from 'react-player'
 
-const VideoCard = ({ videoId }) => {
-  const playerRef = useRef(null);
-
-  useEffect(() => {
-    const tag = document.createElement("script");
-    tag.src = "https://www.youtube.com/iframe_api";
-    document.body.appendChild(tag);
-  
-    if (window.YT) {
-      const player = new window.YT.Player(playerRef.current, {
-        videoId,
-        width: 'auto',
-        height: 'auto',
-        events: {
-          onReady: (event) => event.target.playVideo(),
-        },
-      });
-  
-      return () => {
-        player.destroy();
-      };
-    }
-  }, [videoId]);
-
+const MyComponent = (props) => {
+  const videoId = props.videoId;
   return (
-    <div>
-      <div ref={playerRef} />
-    </div>
-  );
-};
-
-
-export default VideoCard;
+    <ReactPlayer
+      url={`https://www.youtube.com/watch?v=${videoId}`}
+      controls
+    />
+  )
+}
+export default MyComponent;

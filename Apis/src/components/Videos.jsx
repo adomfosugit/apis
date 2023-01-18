@@ -1,5 +1,6 @@
 import React from 'react'
-import VideoCard from './VideoCard'
+
+import MyComponent from './VideoCard';
 
 const Videos = ({ videos }) => {
   if (videos.length > 0) {
@@ -7,7 +8,9 @@ const Videos = ({ videos }) => {
     console.log(videoId);
     return (
       <div>
-        <VideoCard videoId={videoId} />
+        
+        <MyComponent videoId= {videoId}/>
+
       </div>
     );
   } else {

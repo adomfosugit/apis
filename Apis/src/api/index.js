@@ -6,7 +6,7 @@ import axios from 'axios'
           url: BASE_URL,
           params: {q: query, hl: 'en', gl: 'US'},
           headers: {
-            'X-RapidAPI-Key': '486eb9790emsh8e2e69ee6a7af94p1fb8e4jsn468ff4e50912',
+            'X-RapidAPI-Key': '562d622a65msha01a4d66be58973p1031d8jsn89ad26f05128',
             'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
           }
         };
