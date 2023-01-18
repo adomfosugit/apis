@@ -1,0 +1,19 @@
+import React from 'react'
+import VideoCard from './VideoCard'
+
+const Videos = ({ videos }) => {
+  if (videos.length > 0) {
+    const [{ video: { videoId } }] = videos;
+    console.log(videoId);
+    return (
+      <div>
+        <VideoCard videoId={videoId} />
+      </div>
+    );
+  } else {
+    return <div>No videos available</div>;
+  }
+};
+
+
+export default Videos
